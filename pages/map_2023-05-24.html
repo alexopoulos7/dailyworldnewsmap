@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0235bd9ccda68a499167579f952af055 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0235bd9ccda68a499167579f952af055" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0235bd9ccda68a499167579f952af055 = L.map(
+                "map_0235bd9ccda68a499167579f952af055",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_117fb06f254bfeb165767291248c18ca = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_0235bd9ccda68a499167579f952af055);
+        
+    
+            var marker_86a9cf98d2d796a697a4d4fc1f324012 = L.marker(
+                [27.7567667, -81.4639835],
+                {}
+            ).addTo(map_0235bd9ccda68a499167579f952af055);
+        
+    
+            var icon_5d6bb7f9229b16edf8520f9e7bbdc897 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_86a9cf98d2d796a697a4d4fc1f324012.setIcon(icon_5d6bb7f9229b16edf8520f9e7bbdc897);
+        
+    
+        var popup_e1d975735282b1834e690a1fdb4e4e00 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_6c9827b923a512725997629ee55ed4e2 = $(`<div id="html_6c9827b923a512725997629ee55ed4e2" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Florida,United States</h2>                 <img src="https://flagcdn.com/16x12/us.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-24</p>                 <p style="font-size:14px;color:black;text-align:justify;">Gov. Ron DeSantis of Florida plans to announce his 2024 presidential campaign in a live conversation on Twitter with Elon Musk, moderated by Republican donor David Sacks.</p>             </div>             </div>`)[0];
+                popup_e1d975735282b1834e690a1fdb4e4e00.setContent(html_6c9827b923a512725997629ee55ed4e2);
+            
+        
+
+        marker_86a9cf98d2d796a697a4d4fc1f324012.bindPopup(popup_e1d975735282b1834e690a1fdb4e4e00)
+        ;
+
+        
+    
+    
+            var marker_cbd7d48afe2e3fa7c7a280f3dcb4e822 = L.marker(
+                [50.5955595, 36.5873394],
+                {}
+            ).addTo(map_0235bd9ccda68a499167579f952af055);
+        
+    
+            var icon_97e13a0e1bb8129d1c2aff8e189f1045 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_cbd7d48afe2e3fa7c7a280f3dcb4e822.setIcon(icon_97e13a0e1bb8129d1c2aff8e189f1045);
+        
+    
+        var popup_ea87cb944753809d634971f8b9a735ee = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_a699e5aa95cb60cb2af7d0fca9e969f2 = $(`<div id="html_a699e5aa95cb60cb2af7d0fca9e969f2" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Belgorod,Russia</h2>                 <img src="https://flagcdn.com/16x12/ru.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-24</p>                 <p style="font-size:14px;color:black;text-align:justify;">Anti-Kremlin fighters aligned with Ukraine launched a rare cross-border assault in southern Russia, with reports of an explosion at a defense factory and skirmishes at a crossing.</p>             </div>             </div>`)[0];
+                popup_ea87cb944753809d634971f8b9a735ee.setContent(html_a699e5aa95cb60cb2af7d0fca9e969f2);
+            
+        
+
+        marker_cbd7d48afe2e3fa7c7a280f3dcb4e822.bindPopup(popup_ea87cb944753809d634971f8b9a735ee)
+        ;
+
+        
+    
+    
+            var marker_e648a880aa13303a8855e75f5e28f0bb = L.marker(
+                [51.5073359, -0.12765],
+                {}
+            ).addTo(map_0235bd9ccda68a499167579f952af055);
+        
+    
+            var icon_fb3a641eee13ad10f25c948de75daf4c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_e648a880aa13303a8855e75f5e28f0bb.setIcon(icon_fb3a641eee13ad10f25c948de75daf4c);
+        
+    
+        var popup_04d18386e11f324576ec4450e24c4c2a = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_82af483be4b3c59f92841a8fbe68e51e = $(`<div id="html_82af483be4b3c59f92841a8fbe68e51e" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">London,United Kingdom</h2>                 <img src="https://flagcdn.com/16x12/gb.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-24</p>                 <p style="font-size:14px;color:black;text-align:justify;">Former British Prime Minister Boris Johnson has been referred to the police by the Cabinet Office to assess claims of further violations of coronavirus regulations.</p>             </div>             </div>`)[0];
+                popup_04d18386e11f324576ec4450e24c4c2a.setContent(html_82af483be4b3c59f92841a8fbe68e51e);
+            
+        
+
+        marker_e648a880aa13303a8855e75f5e28f0bb.bindPopup(popup_04d18386e11f324576ec4450e24c4c2a)
+        ;
+
+        
+    
+    
+            var marker_825d15b6162ccb0545eae9a7dbd409ba = L.marker(
+                [-35.2975906, 149.1012676],
+                {}
+            ).addTo(map_0235bd9ccda68a499167579f952af055);
+        
+    
+            var icon_80d7487ce27113baa3e2d24eb3651977 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_825d15b6162ccb0545eae9a7dbd409ba.setIcon(icon_80d7487ce27113baa3e2d24eb3651977);
+        
+    
+        var popup_fc0512d85e512e6682dbdf2b96e2c80d = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_021a99179983930ac5a78ff47317af11 = $(`<div id="html_021a99179983930ac5a78ff47317af11" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Canberra,Australia</h2>                 <img src="https://flagcdn.com/16x12/au.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-24</p>                 <p style="font-size:14px;color:black;text-align:justify;">Australia, the world's largest supplier of lithium, plans to keep processing on its soil instead of shipping it to China for refining.</p>             </div>             </div>`)[0];
+                popup_fc0512d85e512e6682dbdf2b96e2c80d.setContent(html_021a99179983930ac5a78ff47317af11);
+            
+        
+
+        marker_825d15b6162ccb0545eae9a7dbd409ba.bindPopup(popup_fc0512d85e512e6682dbdf2b96e2c80d)
+        ;
+
+        
+    
+    
+            var marker_f340c23533338b040f25b272ae3e56e1 = L.marker(
+                [28.6138954, 77.2090057],
+                {}
+            ).addTo(map_0235bd9ccda68a499167579f952af055);
+        
+    
+            var icon_d1c1f4b31b6639e7fe984ee0e9790f30 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f340c23533338b040f25b272ae3e56e1.setIcon(icon_d1c1f4b31b6639e7fe984ee0e9790f30);
+        
+    
+        var popup_1046a33c6bb02988f7aac980703ef4a2 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_7ac6d58b29ae10c12aa10f47e23abd35 = $(`<div id="html_7ac6d58b29ae10c12aa10f47e23abd35" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">New Delhi,India</h2>                 <img src="https://flagcdn.com/16x12/in.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-24</p>                 <p style="font-size:14px;color:black;text-align:justify;">India's top court asked the government to find a new place for resettled cheetahs after three died in a wildlife sanctuary.</p>             </div>             </div>`)[0];
+                popup_1046a33c6bb02988f7aac980703ef4a2.setContent(html_7ac6d58b29ae10c12aa10f47e23abd35);
+            
+        
+
+        marker_f340c23533338b040f25b272ae3e56e1.bindPopup(popup_1046a33c6bb02988f7aac980703ef4a2)
+        ;
+
+        
+    
+    
+            var marker_e5d83dae5d85abdb17ff458cd056a599 = L.marker(
+                [15.5635972, 32.5349123],
+                {}
+            ).addTo(map_0235bd9ccda68a499167579f952af055);
+        
+    
+            var icon_ad9405b75c24cc7ad5a4400b7d0b74f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_e5d83dae5d85abdb17ff458cd056a599.setIcon(icon_ad9405b75c24cc7ad5a4400b7d0b74f9);
+        
+    
+        var popup_cc9ebf9e1c02eace79ef0168b26f8dc6 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_971cc2fc086966c63ca3dc0c9d491802 = $(`<div id="html_971cc2fc086966c63ca3dc0c9d491802" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Khartoum,Sudan</h2>                 <img src="https://flagcdn.com/16x12/sd.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-24</p>                 <p style="font-size:14px;color:black;text-align:justify;">Fighting in Sudan has forced pregnant women to dodge artillery and shuttle through checkpoints to reach health care.</p>             </div>             </div>`)[0];
+                popup_cc9ebf9e1c02eace79ef0168b26f8dc6.setContent(html_971cc2fc086966c63ca3dc0c9d491802);
+            
+        
+
+        marker_e5d83dae5d85abdb17ff458cd056a599.bindPopup(popup_cc9ebf9e1c02eace79ef0168b26f8dc6)
+        ;
+
+        
+    
+    
+            var marker_62910946c1b866f5ee6b02680a9f1ccc = L.marker(
+                [38.8950368, -77.0365427],
+                {}
+            ).addTo(map_0235bd9ccda68a499167579f952af055);
+        
+    
+            var icon_783b4bc51007daec84efbc3d591c48d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_62910946c1b866f5ee6b02680a9f1ccc.setIcon(icon_783b4bc51007daec84efbc3d591c48d1);
+        
+    
+        var popup_40138cd31cdc2ebddd9450bbd3a4b37e = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_5fbb15fb0df066abc756b2850993cafd = $(`<div id="html_5fbb15fb0df066abc756b2850993cafd" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Washington D.C.,United States</h2>                 <img src="https://flagcdn.com/16x12/us.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-24</p>                 <p style="font-size:14px;color:black;text-align:justify;">U.S. warships are increasing patrols through the Strait of Hormuz after Iran tried to seize two oil tankers.</p>             </div>             </div>`)[0];
+                popup_40138cd31cdc2ebddd9450bbd3a4b37e.setContent(html_5fbb15fb0df066abc756b2850993cafd);
+            
+        
+
+        marker_62910946c1b866f5ee6b02680a9f1ccc.bindPopup(popup_40138cd31cdc2ebddd9450bbd3a4b37e)
+        ;
+
+        
+    
+    
+            var marker_f7014ab0737fb5fd269c9c10c4860ec5 = L.marker(
+                [40.7127281, -74.0060152],
+                {}
+            ).addTo(map_0235bd9ccda68a499167579f952af055);
+        
+    
+            var icon_c13313e624cab9bd9c34de74b00a1832 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f7014ab0737fb5fd269c9c10c4860ec5.setIcon(icon_c13313e624cab9bd9c34de74b00a1832);
+        
+    
+        var popup_8e27434e250333ea307c76729a6dff9b = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_9ad01f5137e3e1895fdf0f105ca66eae = $(`<div id="html_9ad01f5137e3e1895fdf0f105ca66eae" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">New York City,United States</h2>                 <img src="https://flagcdn.com/16x12/us.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-24</p>                 <p style="font-size:14px;color:black;text-align:justify;">Prince Harry lost a bid to pay for police protection in Britain, days after a disputed encounter with photographers in New York City.</p>             </div>             </div>`)[0];
+                popup_8e27434e250333ea307c76729a6dff9b.setContent(html_9ad01f5137e3e1895fdf0f105ca66eae);
+            
+        
+
+        marker_f7014ab0737fb5fd269c9c10c4860ec5.bindPopup(popup_8e27434e250333ea307c76729a6dff9b)
+        ;
+
+        
+    
+    
+            var marker_7243c767cf4253db4a25d368e3885fcc = L.marker(
+                [35.6892523, 51.3896004],
+                {}
+            ).addTo(map_0235bd9ccda68a499167579f952af055);
+        
+    
+            var icon_062dd57dbd8d9e641d9f00b5fd0769d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_7243c767cf4253db4a25d368e3885fcc.setIcon(icon_062dd57dbd8d9e641d9f00b5fd0769d3);
+        
+    
+        var popup_fcbd0a2369ec3658e203a4975feaf68b = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_d45a5e3e4b14fc1a30fb6e7a0198adff = $(`<div id="html_d45a5e3e4b14fc1a30fb6e7a0198adff" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Tehran,Iran</h2>                 <img src="https://flagcdn.com/16x12/ir.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-24</p>                 <p style="font-size:14px;color:black;text-align:justify;">Iran removed Ali Shamkhani, its top national security official, after he came under scrutiny over his close ties with a high-ranking British spy.</p>             </div>             </div>`)[0];
+                popup_fcbd0a2369ec3658e203a4975feaf68b.setContent(html_d45a5e3e4b14fc1a30fb6e7a0198adff);
+            
+        
+
+        marker_7243c767cf4253db4a25d368e3885fcc.bindPopup(popup_fcbd0a2369ec3658e203a4975feaf68b)
+        ;
+
+        
+    
+    
+            var marker_c1ad715ba37e370c2d1bdba0ba053ba1 = L.marker(
+                [48.2083537, 16.3725042],
+                {}
+            ).addTo(map_0235bd9ccda68a499167579f952af055);
+        
+    
+            var icon_9c10272e1813e81548b7d6704268deb4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c1ad715ba37e370c2d1bdba0ba053ba1.setIcon(icon_9c10272e1813e81548b7d6704268deb4);
+        
+    
+        var popup_78aa3d8bbec4301dc225dbf5297e92b7 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_77245e9d69dfff7e1dff9a9ddb006f9d = $(`<div id="html_77245e9d69dfff7e1dff9a9ddb006f9d" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Vienna,Austria</h2>                 <img src="https://flagcdn.com/16x12/at.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-24</p>                 <p style="font-size:14px;color:black;text-align:justify;">Vienna's public housing, known as the Gemeindebauten, provides homes for 80 percent of residents, leading to greater economic diversity and better outcomes.</p>             </div>             </div>`)[0];
+                popup_78aa3d8bbec4301dc225dbf5297e92b7.setContent(html_77245e9d69dfff7e1dff9a9ddb006f9d);
+            
+        
+
+        marker_c1ad715ba37e370c2d1bdba0ba053ba1.bindPopup(popup_78aa3d8bbec4301dc225dbf5297e92b7)
+        ;
+
+        
+    
+    
+            var marker_f7006241046af725f7584a6a133819aa = L.marker(
+                [42.6977028, 23.3217359],
+                {}
+            ).addTo(map_0235bd9ccda68a499167579f952af055);
+        
+    
+            var icon_9e3161b33eb17bfa553f1cce185b9e66 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f7006241046af725f7584a6a133819aa.setIcon(icon_9e3161b33eb17bfa553f1cce185b9e66);
+        
+    
+        var popup_d418c6ae2b903c874fd2c5297bac3146 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_4c1be4aec5cbd0ffa06a7ab8d12cd93c = $(`<div id="html_4c1be4aec5cbd0ffa06a7ab8d12cd93c" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Sofia,Bulgaria</h2>                 <img src="https://flagcdn.com/16x12/bg.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-24</p>                 <p style="font-size:14px;color:black;text-align:justify;">Georgi Gospodinov's novel 'Time Shelter,' translated by Angela Rodel, is the first Bulgarian novel to win the International Booker Prize.</p>             </div>             </div>`)[0];
+                popup_d418c6ae2b903c874fd2c5297bac3146.setContent(html_4c1be4aec5cbd0ffa06a7ab8d12cd93c);
+            
+        
+
+        marker_f7006241046af725f7584a6a133819aa.bindPopup(popup_d418c6ae2b903c874fd2c5297bac3146)
+        ;
+
+        
+    
+</script>
+</html>

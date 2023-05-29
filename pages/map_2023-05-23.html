@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d0c56d9e5e034329a043ff12274d26da {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d0c56d9e5e034329a043ff12274d26da" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d0c56d9e5e034329a043ff12274d26da = L.map(
+                "map_d0c56d9e5e034329a043ff12274d26da",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7320da7f179cf985c3283743d6ab427d = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d0c56d9e5e034329a043ff12274d26da);
+        
+    
+            var marker_a3855b5e1bab51b39b7bbcd2347c72f3 = L.marker(
+                [48.5894123, 38.0020994],
+                {}
+            ).addTo(map_d0c56d9e5e034329a043ff12274d26da);
+        
+    
+            var icon_a5bf9c4a37a0c6693f06c94dbd9155f5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a3855b5e1bab51b39b7bbcd2347c72f3.setIcon(icon_a5bf9c4a37a0c6693f06c94dbd9155f5);
+        
+    
+        var popup_41dbf5d25adb7b1509e7e102e04c78e2 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_ce2e34fb51c6f82136c3e383c720a3f5 = $(`<div id="html_ce2e34fb51c6f82136c3e383c720a3f5" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Bakhmut,Ukraine</h2>                 <img src="https://flagcdn.com/16x12/ua.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-23</p>                 <p style="font-size:14px;color:black;text-align:justify;">Drone footage shows the destruction of Bakhmut in eastern Ukraine, with both Russians and Ukrainians suffering heavy losses in the ongoing battle.</p>             </div>             </div>`)[0];
+                popup_41dbf5d25adb7b1509e7e102e04c78e2.setContent(html_ce2e34fb51c6f82136c3e383c720a3f5);
+            
+        
+
+        marker_a3855b5e1bab51b39b7bbcd2347c72f3.bindPopup(popup_41dbf5d25adb7b1509e7e102e04c78e2)
+        ;
+
+        
+    
+    
+            var marker_89d23e8135244753ff709aec2c279de2 = L.marker(
+                [39.17584185, 25.998913450232415],
+                {}
+            ).addTo(map_d0c56d9e5e034329a043ff12274d26da);
+        
+    
+            var icon_166962e99792dcde6a3ccbefdd27da1d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_89d23e8135244753ff709aec2c279de2.setIcon(icon_166962e99792dcde6a3ccbefdd27da1d);
+        
+    
+        var popup_c09f141ed216439fb989d3b88ac7672d = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_736122615ef0d9d1dadcb2058fa0a585 = $(`<div id="html_736122615ef0d9d1dadcb2058fa0a585" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Lesbos,Greece</h2>                 <img src="https://flagcdn.com/16x12/gr.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-23</p>                 <p style="font-size:14px;color:black;text-align:justify;">The European Commission has asked Greece to investigate a Times report showing the country's Coast Guard abandoning migrants in the Aegean Sea.</p>             </div>             </div>`)[0];
+                popup_c09f141ed216439fb989d3b88ac7672d.setContent(html_736122615ef0d9d1dadcb2058fa0a585);
+            
+        
+
+        marker_89d23e8135244753ff709aec2c279de2.bindPopup(popup_c09f141ed216439fb989d3b88ac7672d)
+        ;
+
+        
+    
+    
+            var marker_a887e2551c337c745f09ddb153851363 = L.marker(
+                [38.8950368, -77.0365427],
+                {}
+            ).addTo(map_d0c56d9e5e034329a043ff12274d26da);
+        
+    
+            var icon_a6bb2d43d7926763c846c709e57d9efe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a887e2551c337c745f09ddb153851363.setIcon(icon_a6bb2d43d7926763c846c709e57d9efe);
+        
+    
+        var popup_3ba92255269a2351238c3bfa2fb7c4dc = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_fa03f165b0244342a8f8285c3a9ec0c9 = $(`<div id="html_fa03f165b0244342a8f8285c3a9ec0c9" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Washington D.C.,United States</h2>                 <img src="https://flagcdn.com/16x12/us.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-23</p>                 <p style="font-size:14px;color:black;text-align:justify;">President Biden and Speaker Kevin McCarthy remain optimistic about breaking the partisan stalemate and averting a default on the U.S.'s debt, despite remaining far apart on a deal.</p>             </div>             </div>`)[0];
+                popup_3ba92255269a2351238c3bfa2fb7c4dc.setContent(html_fa03f165b0244342a8f8285c3a9ec0c9);
+            
+        
+
+        marker_a887e2551c337c745f09ddb153851363.bindPopup(popup_3ba92255269a2351238c3bfa2fb7c4dc)
+        ;
+
+        
+    
+    
+            var marker_3e10867b22610fe2be543f942c8bdbee = L.marker(
+                [39.9057136, 116.3912972],
+                {}
+            ).addTo(map_d0c56d9e5e034329a043ff12274d26da);
+        
+    
+            var icon_2ac0105ef6e4ced1c137b99760b60c7d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_3e10867b22610fe2be543f942c8bdbee.setIcon(icon_2ac0105ef6e4ced1c137b99760b60c7d);
+        
+    
+        var popup_22372eb3e5922bf78995077c4a153d83 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_54186fafa36f99d21283f9099782c6d0 = $(`<div id="html_54186fafa36f99d21283f9099782c6d0" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Beijing,China</h2>                 <img src="https://flagcdn.com/16x12/cn.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-23</p>                 <p style="font-size:14px;color:black;text-align:justify;">The Chinese government banned key companies from buying a U.S.-based manufacturer's memory chips.</p>             </div>             </div>`)[0];
+                popup_22372eb3e5922bf78995077c4a153d83.setContent(html_54186fafa36f99d21283f9099782c6d0);
+            
+        
+
+        marker_3e10867b22610fe2be543f942c8bdbee.bindPopup(popup_22372eb3e5922bf78995077c4a153d83)
+        ;
+
+        
+    
+    
+            var marker_d13ca35fc5a67696345726888895df3f = L.marker(
+                [19.4326296, -99.1331785],
+                {}
+            ).addTo(map_d0c56d9e5e034329a043ff12274d26da);
+        
+    
+            var icon_595e9eab5de6cd936cbbe24d20dcab7c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d13ca35fc5a67696345726888895df3f.setIcon(icon_595e9eab5de6cd936cbbe24d20dcab7c);
+        
+    
+        var popup_64f5faadc73a3035e67fd6a6d5e02399 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_05a19db592ff32b4bb6882b0c4839673 = $(`<div id="html_05a19db592ff32b4bb6882b0c4839673" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Mexico City,Mexico</h2>                 <img src="https://flagcdn.com/16x12/mx.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-23</p>                 <p style="font-size:14px;color:black;text-align:justify;">Mexico's top human rights official was targeted with the spyware Pegasus while investigating abuses by the nation's military.</p>             </div>             </div>`)[0];
+                popup_64f5faadc73a3035e67fd6a6d5e02399.setContent(html_05a19db592ff32b4bb6882b0c4839673);
+            
+        
+
+        marker_d13ca35fc5a67696345726888895df3f.bindPopup(popup_64f5faadc73a3035e67fd6a6d5e02399)
+        ;
+
+        
+    
+    
+            var marker_fb0d3e18ab8cd4a281aa1047a4d75e54 = L.marker(
+                [44.4361414, 26.1027202],
+                {}
+            ).addTo(map_d0c56d9e5e034329a043ff12274d26da);
+        
+    
+            var icon_29dbc2e62ae974bb39761ea3a76e9847 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_fb0d3e18ab8cd4a281aa1047a4d75e54.setIcon(icon_29dbc2e62ae974bb39761ea3a76e9847);
+        
+    
+        var popup_47f9815751a4d776c40682b4eb81a488 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_6ddb32bedbc168ef0173eec823d40d13 = $(`<div id="html_6ddb32bedbc168ef0173eec823d40d13" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Bucharest,Romania</h2>                 <img src="https://flagcdn.com/16x12/ro.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-23</p>                 <p style="font-size:14px;color:black;text-align:justify;">Influencer Andrew Tate faces charges of human trafficking and rape in Romania, after seeking out a place where corruption is accessible to everyone.</p>             </div>             </div>`)[0];
+                popup_47f9815751a4d776c40682b4eb81a488.setContent(html_6ddb32bedbc168ef0173eec823d40d13);
+            
+        
+
+        marker_fb0d3e18ab8cd4a281aa1047a4d75e54.bindPopup(popup_47f9815751a4d776c40682b4eb81a488)
+        ;
+
+        
+    
+    
+            var marker_175c4d8f022130f68b78ff4ce10473d3 = L.marker(
+                [48.8534951, 2.3483915],
+                {}
+            ).addTo(map_d0c56d9e5e034329a043ff12274d26da);
+        
+    
+            var icon_5594c48485de27b32d685ddce52682fc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_175c4d8f022130f68b78ff4ce10473d3.setIcon(icon_5594c48485de27b32d685ddce52682fc);
+        
+    
+        var popup_a66c4713e0de6f1139c9acaaa3af08fd = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_21b551eee96a459edce9814fdda13654 = $(`<div id="html_21b551eee96a459edce9814fdda13654" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Paris,France</h2>                 <img src="https://flagcdn.com/16x12/fr.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-23</p>                 <p style="font-size:14px;color:black;text-align:justify;">Opponents of President Emmanuel Macron's pension changes in France have been protesting by banging pots and pans, disrupting visits by ministers to schools and factories.</p>             </div>             </div>`)[0];
+                popup_a66c4713e0de6f1139c9acaaa3af08fd.setContent(html_21b551eee96a459edce9814fdda13654);
+            
+        
+
+        marker_175c4d8f022130f68b78ff4ce10473d3.bindPopup(popup_a66c4713e0de6f1139c9acaaa3af08fd)
+        ;
+
+        
+    
+</script>
+</html>

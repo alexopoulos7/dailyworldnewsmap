@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f09127b46a05ce9cc2c84c5dbbba40f5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    <div id="map-controls">
+        <button id="button1">Button 1</button>
+        <button id="button2">Button 2</button>
+        <input type="date" id="calendar">
+    </div>
+            <div class="folium-map" id="map_f09127b46a05ce9cc2c84c5dbbba40f5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f09127b46a05ce9cc2c84c5dbbba40f5 = L.map(
+                "map_f09127b46a05ce9cc2c84c5dbbba40f5",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b221b2d34cf14c87e869794d77bd9971 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f09127b46a05ce9cc2c84c5dbbba40f5);
+        
+    
+            var marker_58d49dff447025464c98c7bc81a36d54 = L.marker(
+                [39.7837304, -100.445882],
+                {}
+            ).addTo(map_f09127b46a05ce9cc2c84c5dbbba40f5);
+        
+    
+            var icon_7cfcc484319b096bf2d9707d9cb0ff87 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "yellow", "prefix": "fa"}
+            );
+            marker_58d49dff447025464c98c7bc81a36d54.setIcon(icon_7cfcc484319b096bf2d9707d9cb0ff87);
+        
+    
+        var popup_c2269470d347fa16a97a31a057a7da3d = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_d7f91afdfe226683c23b8c935a51d9aa = $(`<div id="html_d7f91afdfe226683c23b8c935a51d9aa" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">United States</h2>                 <img src="https://flagcdn.com/16x12/nu.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-19</p>                 <p style="font-size:14px;color:black;text-align:justify;">The U.S. is nearing a debt limit crisis, with Democrats refusing to negotiate and Republicans insisting on a deal stocked with right-wing policy priorities. President Biden has agreed to have his staff meet directly with Speaker Kevin McCarthy's aides, increasing the chances of a deal to increase the borrowing limit.</p>             </div>             </div>`)[0];
+                popup_c2269470d347fa16a97a31a057a7da3d.setContent(html_d7f91afdfe226683c23b8c935a51d9aa);
+            
+        
+
+        marker_58d49dff447025464c98c7bc81a36d54.bindPopup(popup_c2269470d347fa16a97a31a057a7da3d)
+        ;
+
+        
+    
+    
+            var marker_8a5330b1d71509d3b62555d2e2284831 = L.marker(
+                [49.4871968, 31.2718321],
+                {}
+            ).addTo(map_f09127b46a05ce9cc2c84c5dbbba40f5);
+        
+    
+            var icon_fed018c00036b1333f46012464dd0385 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "2", "iconColor": "white", "markerColor": "yellow", "prefix": "fa"}
+            );
+            marker_8a5330b1d71509d3b62555d2e2284831.setIcon(icon_fed018c00036b1333f46012464dd0385);
+        
+    
+        var popup_f821408e923e809d6c342bb72629ff88 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_bbc780f4890ce9d742c28ed50298da83 = $(`<div id="html_bbc780f4890ce9d742c28ed50298da83" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Ukraine</h2>                 <img src="https://flagcdn.com/16x12/ua.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-19</p>                 <p style="font-size:14px;color:black;text-align:justify;">The Pentagon has reduced its estimate of the value of weapons sent to Ukraine, freeing up at least $3 billion to supply Ukrainian troops with arms. The Biden administration has faced pressure to explain how it intends to continue supporting Ukraine without asking Congress to replenish its budget. <br> <br>The chief of Ukraine's Supreme Court was formally arrested, as prosecutors indicated that a high-level corruption case was expanding to include a wider circle of judges.</p>             </div>             </div>`)[0];
+                popup_f821408e923e809d6c342bb72629ff88.setContent(html_bbc780f4890ce9d742c28ed50298da83);
+            
+        
+
+        marker_8a5330b1d71509d3b62555d2e2284831.bindPopup(popup_f821408e923e809d6c342bb72629ff88)
+        ;
+
+        
+    
+    
+            var marker_1bc231c65ee2591b0f26e0397c784bdf = L.marker(
+                [34.6401861, 39.0494106],
+                {}
+            ).addTo(map_f09127b46a05ce9cc2c84c5dbbba40f5);
+        
+    
+            var icon_34243b4198a0ca4269bd421bba5899a1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "yellow", "prefix": "fa"}
+            );
+            marker_1bc231c65ee2591b0f26e0397c784bdf.setIcon(icon_34243b4198a0ca4269bd421bba5899a1);
+        
+    
+        var popup_3f00a54b10137d7e6ab32af997c5af92 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_b7092cf03dd5ecb830e5c15ad45a6c69 = $(`<div id="html_b7092cf03dd5ecb830e5c15ad45a6c69" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Syria</h2>                 <img src="https://flagcdn.com/16x12/nu.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-19</p>                 <p style="font-size:14px;color:black;text-align:justify;">Since a devastating earthquake struck Turkey and Syria, Syrian President Bashar al-Assad has made a comeback, going from years of near-total global isolation to a welcome back into the Arab fold with virtually no strings attached. He is expected to attend an annual summit of Arab leaders for the first time in 13 years.</p>             </div>             </div>`)[0];
+                popup_3f00a54b10137d7e6ab32af997c5af92.setContent(html_b7092cf03dd5ecb830e5c15ad45a6c69);
+            
+        
+
+        marker_1bc231c65ee2591b0f26e0397c784bdf.bindPopup(popup_3f00a54b10137d7e6ab32af997c5af92)
+        ;
+
+        
+    
+    
+            var marker_6c7d88bbc983593deecbfb2ba2844077 = L.marker(
+                [31.79592425, 35.21198075969497],
+                {}
+            ).addTo(map_f09127b46a05ce9cc2c84c5dbbba40f5);
+        
+    
+            var icon_f953cadebe376be77dcc34d7a911a59b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "yellow", "prefix": "fa"}
+            );
+            marker_6c7d88bbc983593deecbfb2ba2844077.setIcon(icon_f953cadebe376be77dcc34d7a911a59b);
+        
+    
+        var popup_2bc703882a60bcfe237ed738f228874f = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_3b89c1ea9f5605b8a868918df99dc5a9 = $(`<div id="html_3b89c1ea9f5605b8a868918df99dc5a9" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Jerusalem,Israel</h2>                 <img src="https://flagcdn.com/16x12/il.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-19</p>                 <p style="font-size:14px;color:black;text-align:justify;">Thousands of Israelis, many from ultranationalist groups, marched through Jerusalem to celebrate their country's capture of East Jerusalem in 1967, in a contentious annual event that stirs tensions with Palestinians.</p>             </div>             </div>`)[0];
+                popup_2bc703882a60bcfe237ed738f228874f.setContent(html_3b89c1ea9f5605b8a868918df99dc5a9);
+            
+        
+
+        marker_6c7d88bbc983593deecbfb2ba2844077.bindPopup(popup_2bc703882a60bcfe237ed738f228874f)
+        ;
+
+        
+    
+    
+            var marker_61e3e23ebaf9df483b3a0fc3ee16e1c5 = L.marker(
+                [1.357107, 103.8194992],
+                {}
+            ).addTo(map_f09127b46a05ce9cc2c84c5dbbba40f5);
+        
+    
+            var icon_f198cf490430db792ca5451075cac0a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_61e3e23ebaf9df483b3a0fc3ee16e1c5.setIcon(icon_f198cf490430db792ca5451075cac0a5);
+        
+    
+        var popup_94f9fe0cd13338e64eb99555e30fe758 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_2abe3687dbe0ff4e79d06def48662d8a = $(`<div id="html_2abe3687dbe0ff4e79d06def48662d8a" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Singapore</h2>                 <img src="https://flagcdn.com/16x12/sg.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-19</p>                 <p style="font-size:14px;color:black;text-align:justify;">Singapore hanged a man for trafficking 3.4 pounds of marijuana, the country's second drug-related execution in three weeks.</p>             </div>             </div>`)[0];
+                popup_94f9fe0cd13338e64eb99555e30fe758.setContent(html_2abe3687dbe0ff4e79d06def48662d8a);
+            
+        
+
+        marker_61e3e23ebaf9df483b3a0fc3ee16e1c5.bindPopup(popup_94f9fe0cd13338e64eb99555e30fe758)
+        ;
+
+        
+    
+    
+            var marker_54fdfe42575415e259ebba7b32ecf873 = L.marker(
+                [52.5310214, -1.2649062],
+                {}
+            ).addTo(map_f09127b46a05ce9cc2c84c5dbbba40f5);
+        
+    
+            var icon_b0017104bfbee4846a9b58cc0ba84523 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_54fdfe42575415e259ebba7b32ecf873.setIcon(icon_b0017104bfbee4846a9b58cc0ba84523);
+        
+    
+        var popup_8b589183a272072e1d5cdd2d1979ef87 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_854aa15adf05b47115956f45ba8cc08e = $(`<div id="html_854aa15adf05b47115956f45ba8cc08e" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">England</h2>                 <img src="https://flagcdn.com/16x12/nu.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-19</p>                 <p style="font-size:14px;color:black;text-align:justify;">Private water and sewage companies in England announced a plan totaling 10 billion pounds to modernize the country's sewers.</p>             </div>             </div>`)[0];
+                popup_8b589183a272072e1d5cdd2d1979ef87.setContent(html_854aa15adf05b47115956f45ba8cc08e);
+            
+        
+
+        marker_54fdfe42575415e259ebba7b32ecf873.bindPopup(popup_8b589183a272072e1d5cdd2d1979ef87)
+        ;
+
+        
+    
+    
+            var marker_719327c5269ed44fccbb99e3f738743c = L.marker(
+                [52.215933, 19.134422],
+                {}
+            ).addTo(map_f09127b46a05ce9cc2c84c5dbbba40f5);
+        
+    
+            var icon_261bbe9a47bd076cd8cea08261178e53 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "yellow", "prefix": "fa"}
+            );
+            marker_719327c5269ed44fccbb99e3f738743c.setIcon(icon_261bbe9a47bd076cd8cea08261178e53);
+        
+    
+        var popup_11390d55e8dc4b77a396f4f9c7b6a43f = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_02938b1ea4c242b317ff1b9aaf6c8c9c = $(`<div id="html_02938b1ea4c242b317ff1b9aaf6c8c9c" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Poland</h2>                 <img src="https://flagcdn.com/16x12/pl.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-19</p>                 <p style="font-size:14px;color:black;text-align:justify;">A fearsome Viking fortress on Poland's Baltic coast is being debated as either a literary fantasy or a historical reality.</p>             </div>             </div>`)[0];
+                popup_11390d55e8dc4b77a396f4f9c7b6a43f.setContent(html_02938b1ea4c242b317ff1b9aaf6c8c9c);
+            
+        
+
+        marker_719327c5269ed44fccbb99e3f738743c.bindPopup(popup_11390d55e8dc4b77a396f4f9c7b6a43f)
+        ;
+
+         // new code to hide/show controls
+         var mapControls = document.getElementById('map-controls');
+        var arrow = L.control({position: 'topright'});
+
+        arrow.onAdd = function (map) {
+            var div = L.DomUtil.create('div', 'arrow');
+            div.innerHTML = '<i class="fas fa-arrow-up"></i>'; // using FontAwesome for the arrow icon
+            return div;
+        };
+
+        arrow.addTo(map_010e21ff9f3264b491a5fff8ecd9b9f5);
+
+        document.querySelector('.arrow').addEventListener('click', function () {
+            if (mapControls.className === 'hide') {
+                mapControls.className = '';
+                this.innerHTML = '<i class="fas fa-arrow-down"></i>';
+            } else {
+                mapControls.className = 'hide';
+                this.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            }
+        });
+    
+</script>
+</html>

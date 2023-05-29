@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_010e21ff9f3264b491a5fff8ecd9b9f5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+                #map-controls {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000; /* ensures controls are above the map */
+        }
+        .hide {
+            display: none;
+        }
+            </style>
+        
+</head>
+<body>
+      <!-- new div for the buttons and calendar -->
+      <!-- <div id="map-controls">
+        <button id="button1">Button 1</button>
+        <button id="button2">Button 2</button>
+        <input type="date" id="calendar">
+    </div> -->
+    
+            <div class="folium-map" id="map_010e21ff9f3264b491a5fff8ecd9b9f5" ></div>
+        
+</body>
+<script>
+    //  var mapControls = document.getElementById('map-controls');
+    //     var arrow = L.control({position: 'topright'});
+
+    //     arrow.onAdd = function (map) {
+    //         var div = L.DomUtil.create('div', 'arrow');
+    //         div.innerHTML = '<i class="fas fa-arrow-up"></i>'; // using FontAwesome for the arrow icon
+    //         return div;
+    //     };
+
+    //     arrow.addTo(map_010e21ff9f3264b491a5fff8ecd9b9f5);
+
+    //     document.querySelector('.arrow').addEventListener('click', function () {
+    //         if (mapControls.className === 'hide') {
+    //             mapControls.className = '';
+    //             this.innerHTML = '<i class="fas fa-arrow-down"></i>';
+    //         } else {
+    //             mapControls.className = 'hide';
+    //             this.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    //         }
+    //     });
+
+            var tile_layer_3ecfdf23c1c0ece417513971bbdb149a = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_010e21ff9f3264b491a5fff8ecd9b9f5);
+        
+    
+            var marker_28dd83871fa3bbb8b9b7edfbef1f16cb = L.marker(
+                [48.5894123, 38.0020994],
+                {}
+            ).addTo(map_010e21ff9f3264b491a5fff8ecd9b9f5);
+        
+    
+            var icon_51f223e845246b1d3ab4b4d629be5915 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_28dd83871fa3bbb8b9b7edfbef1f16cb.setIcon(icon_51f223e845246b1d3ab4b4d629be5915);
+        
+    
+        var popup_db19c5726224c2b5f7398e872658d918 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_88101fc457181e7f41dd658dc095d3f1 = $(`<div id="html_88101fc457181e7f41dd658dc095d3f1" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Bakhmut,Ukraine</h2>                 <img src="https://flagcdn.com/16x12/ua.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-22</p>                 <p style="font-size:14px;color:black;text-align:justify;">Russia claims victory in Bakhmut, but Ukraine insists the city has not completely fallen. Ukrainian officials plan to rain artillery on Russian forces occupying the city.</p>             </div>             </div>`)[0];
+                popup_db19c5726224c2b5f7398e872658d918.setContent(html_88101fc457181e7f41dd658dc095d3f1);
+            
+        
+
+        marker_28dd83871fa3bbb8b9b7edfbef1f16cb.bindPopup(popup_db19c5726224c2b5f7398e872658d918)
+        ;
+
+        
+    
+    
+            var marker_94af8ff6b4a3a036d40e7e645bae88b0 = L.marker(
+                [37.9839412, 23.7283052],
+                {}
+            ).addTo(map_010e21ff9f3264b491a5fff8ecd9b9f5);
+        
+    
+            var icon_e8bafa579a34004c588bef29ab7df733 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_94af8ff6b4a3a036d40e7e645bae88b0.setIcon(icon_e8bafa579a34004c588bef29ab7df733);
+        
+    
+        var popup_e5bbdddd022e37756b7c5d096e2eb5e8 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_9a3f194ff76cf32cd3b5b3ffc4856f83 = $(`<div id="html_9a3f194ff76cf32cd3b5b3ffc4856f83" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Athens,Greece</h2>                 <img src="https://flagcdn.com/16x12/gr.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-22</p>                 <p style="font-size:14px;color:black;text-align:justify;">New Democracy, the party of Greece's conservative prime minister, Kyriakos Mitsotakis, captured 40.8 percent of the votes in the country's general election but fell short of the majority required to lead a one-party government.</p>             </div>             </div>`)[0];
+                popup_e5bbdddd022e37756b7c5d096e2eb5e8.setContent(html_9a3f194ff76cf32cd3b5b3ffc4856f83);
+            
+        
+
+        marker_94af8ff6b4a3a036d40e7e645bae88b0.bindPopup(popup_e5bbdddd022e37756b7c5d096e2eb5e8)
+        ;
+
+        
+    
+    
+            var marker_2e3c23275ffbe26b351eb8dd87cea84f = L.marker(
+                [38.8950368, -77.0365427],
+                {}
+            ).addTo(map_010e21ff9f3264b491a5fff8ecd9b9f5);
+        
+    
+            var icon_d23518887bd495aed410fa2130370527 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_2e3c23275ffbe26b351eb8dd87cea84f.setIcon(icon_d23518887bd495aed410fa2130370527);
+        
+    
+        var popup_84b5d9c22db18d93434684f24bb77c77 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_c688dd8d37dfd3c09a0838ce16438511 = $(`<div id="html_c688dd8d37dfd3c09a0838ce16438511" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Washington D.C.,United States</h2>                 <img src="https://flagcdn.com/16x12/us.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-22</p>                 <p style="font-size:14px;color:black;text-align:justify;">President Biden and Speaker Kevin McCarthy agreed to meet to try to jump-start talks aimed at averting a default on America's debt. Negotiations faltered over Republicans' demands to cut spending in exchange for raising the debt limit.</p>             </div>             </div>`)[0];
+                popup_84b5d9c22db18d93434684f24bb77c77.setContent(html_c688dd8d37dfd3c09a0838ce16438511);
+            
+        
+
+        marker_2e3c23275ffbe26b351eb8dd87cea84f.bindPopup(popup_84b5d9c22db18d93434684f24bb77c77)
+        ;
+
+        
+    
+    
+            var marker_03c57e18ce3b0eb0e1b905759fc6524b = L.marker(
+                [15.5635972, 32.5349123],
+                {}
+            ).addTo(map_010e21ff9f3264b491a5fff8ecd9b9f5);
+        
+    
+            var icon_bdf025f8197be6ae1f06f7244f05deb5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_03c57e18ce3b0eb0e1b905759fc6524b.setIcon(icon_bdf025f8197be6ae1f06f7244f05deb5);
+        
+    
+        var popup_cd4c7c9c82ed98ff15f37ed0ffb1d9f2 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_3bad5d65a0b195a9b3a463f36c0f985f = $(`<div id="html_3bad5d65a0b195a9b3a463f36c0f985f" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Khartoum,Sudan</h2>                 <img src="https://flagcdn.com/16x12/sd.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-22</p>                 <p style="font-size:14px;color:black;text-align:justify;">Warring groups in Sudan agreed to a seven-day cease-fire set to begin today, the first truce to be signed by both sides.</p>             </div>             </div>`)[0];
+                popup_cd4c7c9c82ed98ff15f37ed0ffb1d9f2.setContent(html_3bad5d65a0b195a9b3a463f36c0f985f);
+            
+        
+
+        marker_03c57e18ce3b0eb0e1b905759fc6524b.bindPopup(popup_cd4c7c9c82ed98ff15f37ed0ffb1d9f2)
+        ;
+
+        
+    
+    
+            var marker_ad40556d6df02ee13f33a94446c91c14 = L.marker(
+                [44.525696, 11.039437],
+                {}
+            ).addTo(map_010e21ff9f3264b491a5fff8ecd9b9f5);
+        
+    
+            var icon_7c17f788b62ca7bfcbacc9c7cad02d42 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ad40556d6df02ee13f33a94446c91c14.setIcon(icon_7c17f788b62ca7bfcbacc9c7cad02d42);
+        
+    
+        var popup_f0152c06a29463cf57b9fedd53b62d53 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_50b15216b80186fb1110254b470afb4a = $(`<div id="html_50b15216b80186fb1110254b470afb4a" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Emilia-Romagna,Italy</h2>                 <img src="https://flagcdn.com/16x12/it.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-22</p>                 <p style="font-size:14px;color:black;text-align:justify;">Residents of the Italian region of Emilia-Romagna face a challenging recovery after devastating flooding that killed 14 people and left thousands homeless.</p>             </div>             </div>`)[0];
+                popup_f0152c06a29463cf57b9fedd53b62d53.setContent(html_50b15216b80186fb1110254b470afb4a);
+            
+        
+
+        marker_ad40556d6df02ee13f33a94446c91c14.bindPopup(popup_f0152c06a29463cf57b9fedd53b62d53)
+        ;
+
+        
+    
+    
+            var marker_8d91509d32e18b4bd61f6bf2a6c91a33 = L.marker(
+                [13.6989939, -89.1914249],
+                {}
+            ).addTo(map_010e21ff9f3264b491a5fff8ecd9b9f5);
+        
+    
+            var icon_ea359a1bcbead3dd35c9d13ebe09005c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8d91509d32e18b4bd61f6bf2a6c91a33.setIcon(icon_ea359a1bcbead3dd35c9d13ebe09005c);
+        
+    
+        var popup_1ebddf32f190a750516fccfdeb3736f8 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_566542a8da4ba89d95c96966ca02a217 = $(`<div id="html_566542a8da4ba89d95c96966ca02a217" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">San Salvador,El Salvador</h2>                 <img src="https://flagcdn.com/16x12/sv.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-22</p>                 <p style="font-size:14px;color:black;text-align:justify;">A stampede at a soccer stadium in El Salvador killed 12 people.</p>             </div>             </div>`)[0];
+                popup_1ebddf32f190a750516fccfdeb3736f8.setContent(html_566542a8da4ba89d95c96966ca02a217);
+            
+        
+
+        marker_8d91509d32e18b4bd61f6bf2a6c91a33.bindPopup(popup_1ebddf32f190a750516fccfdeb3736f8)
+        ;
+
+        
+    
+    
+            var marker_afcf5ad90f58899ca63e5c86c013fb6c = L.marker(
+                [34.5260109, 69.1776838],
+                {}
+            ).addTo(map_010e21ff9f3264b491a5fff8ecd9b9f5);
+        
+    
+            var icon_2888a945e6d9bf9ef66254a4fb6dcd9b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_afcf5ad90f58899ca63e5c86c013fb6c.setIcon(icon_2888a945e6d9bf9ef66254a4fb6dcd9b);
+        
+    
+        var popup_ae5d189c0de5ff5bb8dd09847183002d = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_3adff928c851ecf1eba162ba6c0c5555 = $(`<div id="html_3adff928c851ecf1eba162ba6c0c5555" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Kabul,Afghanistan</h2>                 <img src="https://flagcdn.com/16x12/af.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-22</p>                 <p style="font-size:14px;color:black;text-align:justify;">For thousands of Afghans, the American withdrawal from Kabul was just the beginning of a long, dangerous search for safety that has taken them halfway around the world and through the jungles of South and Central America.</p>             </div>             </div>`)[0];
+                popup_ae5d189c0de5ff5bb8dd09847183002d.setContent(html_3adff928c851ecf1eba162ba6c0c5555);
+            
+        
+
+        marker_afcf5ad90f58899ca63e5c86c013fb6c.bindPopup(popup_ae5d189c0de5ff5bb8dd09847183002d)
+        ;
+
+        
+    
+    
+            var marker_6de0d7004708d729683afea856ccfd7d = L.marker(
+                [51.5073359, -0.12765],
+                {}
+            ).addTo(map_010e21ff9f3264b491a5fff8ecd9b9f5);
+        
+    
+            var icon_824df829637ed350eb03df9246c22e62 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6de0d7004708d729683afea856ccfd7d.setIcon(icon_824df829637ed350eb03df9246c22e62);
+        
+    
+        var popup_0ce5568e1e420072533ab72648f5be4e = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_286f7733367261dba1911157956bb986 = $(`<div id="html_286f7733367261dba1911157956bb986" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">London,United Kingdom</h2>                 <img src="https://flagcdn.com/16x12/gb.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-22</p>                 <p style="font-size:14px;color:black;text-align:justify;">British writer Martin Amis, known for his caustic, erudite and bleakly comic novels, has died at 73.</p>             </div>             </div>`)[0];
+                popup_0ce5568e1e420072533ab72648f5be4e.setContent(html_286f7733367261dba1911157956bb986);
+            
+        
+
+        marker_6de0d7004708d729683afea856ccfd7d.bindPopup(popup_0ce5568e1e420072533ab72648f5be4e)
+        ;
+
+        
+    
+    
+            var marker_333b4b845d442384bae5e37e3e55d9f8 = L.marker(
+                [41.3828939, 2.1774322],
+                {}
+            ).addTo(map_010e21ff9f3264b491a5fff8ecd9b9f5);
+        
+    
+            var icon_8e4674dbffa0066efea44798090117a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_333b4b845d442384bae5e37e3e55d9f8.setIcon(icon_8e4674dbffa0066efea44798090117a5);
+        
+    
+        var popup_6720abddd4f974c1f21967e3586909ba = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_57e1d918835cf58e716e58d9fb0c4a71 = $(`<div id="html_57e1d918835cf58e716e58d9fb0c4a71" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Barcelona,Spain</h2>                 <img src="https://flagcdn.com/16x12/es.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-22</p>                 <p style="font-size:14px;color:black;text-align:justify;">Barcelona Femeni lost to Madrid CFF, 2-1, its first league defeat since June 2021.</p>             </div>             </div>`)[0];
+                popup_6720abddd4f974c1f21967e3586909ba.setContent(html_57e1d918835cf58e716e58d9fb0c4a71);
+            
+        
+
+        marker_333b4b845d442384bae5e37e3e55d9f8.bindPopup(popup_6720abddd4f974c1f21967e3586909ba)
+        ;
+
+        
+    
+    
+            var marker_bbac6c83a6f89abb8651751e75cf2a91 = L.marker(
+                [45.4371908, 12.3345898],
+                {}
+            ).addTo(map_010e21ff9f3264b491a5fff8ecd9b9f5);
+        
+    
+            var icon_02e0cc9f6c7475337db3a09c03e39745 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "1", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_bbac6c83a6f89abb8651751e75cf2a91.setIcon(icon_02e0cc9f6c7475337db3a09c03e39745);
+        
+    
+        var popup_0c32c15f508933bfe5aab445d5cf3c98 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_1bf8ced45d4cbeaaebeed5afa219271a = $(`<div id="html_1bf8ced45d4cbeaaebeed5afa219271a" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Courier; border:2px solid black; padding:10px;">                 <h2 style="color:darkred;">Venice,Italy</h2>                 <img src="https://flagcdn.com/16x12/it.png" alt="Flag">                 <p style="font-size:12px;color:black;">2023-05-22</p>                 <p style="font-size:14px;color:black;text-align:justify;">The Architecture Biennale in Venice explores how cultures from Africa can shape the buildings of the future, with more than half of the participants from Africa or the African diaspora.</p>             </div>             </div>`)[0];
+                popup_0c32c15f508933bfe5aab445d5cf3c98.setContent(html_1bf8ced45d4cbeaaebeed5afa219271a);
+            
+        
+
+        marker_bbac6c83a6f89abb8651751e75cf2a91.bindPopup(popup_0c32c15f508933bfe5aab445d5cf3c98)
+        ;
+
+        
+    
+</script>
+</html>

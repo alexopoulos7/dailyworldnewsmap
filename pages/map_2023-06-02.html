@@ -54,9 +54,9 @@
 </head>
 <body>
 <div id="map-controls" style="position: absolute; z-index: 1000; width: 100%; text-align: center; background-color: rgba(255, 255, 255, 0.7);">
-    <button id="button1" onclick="window.location.href='https://main--cozy-truffle-50c8e0.netlify.app/map_2023-06-01.html'">Yesterday News</button>
-    <button id="button2" onclick="window.location.href='https://main--cozy-truffle-50c8e0.netlify.app/map_2023-06-02.html'">Today News</button>
-    <input type="date" id="calendar" onchange="window.location.href='https://main--cozy-truffle-50c8e0.netlify.app/map_' + this.value + '.html'">
+    <button id="button1" onclick="window.location.href='map_2023-06-01.html'">Yesterday News</button>
+    <button id="button2" onclick="window.location.href='map_2023-06-02.html'">Today News</button>
+    <input type="date" id="calendar" onchange="window.location.href='map_' + this.value + '.html'">
 </div>
     
     
@@ -248,5 +248,14 @@
     }
     ,{"className": "foliumtooltip", "sticky": true});
                      
+    
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById('calendar').value = today;
+ 
 </script>
 </html>

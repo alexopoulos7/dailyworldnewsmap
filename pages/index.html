@@ -52,14 +52,25 @@
             background-color: #0056b3;
         }
     </style>
+    
 </head>
 <body>
+    
     <div class="container">
         <h1>GEONEWS</h1>
         <p>Welcome to Our News and Maps Site</p>
         <p>Discover the latest news and explore interactive maps.</p>
         <p> Click the button below to check what happened to the world today.</p>
-        <a href="news.html" class="cta-button">Get Today's News</a>
+        <a href="news.html" id="news-link" class="cta-button">Get Today's News</a>
     </div>
+    <script>
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+        document.getElementById('news-link').href = "map_" + today + ".html";
+    </script>
 </body>
 </html>
